@@ -14,9 +14,10 @@ export const Route = createFileRoute("/contact")({
 
 function ContactPage() {
   return (
-    <section className="container-x py-24 bg-brand-hero text-[#07090A]">
-      <p className="eyebrow text-[#07090A]/80">Contact</p>
+    <section className="container-x py-24">
+      <p className="eyebrow text-muted-foreground">Contact</p>
       <h1 className="display-xl mt-6 max-w-4xl">Let's build something that lasts.</h1>
+      <div className="kente-rule mt-6" />
 
       <div className="mt-20 grid lg:grid-cols-12 gap-12">
         <div className="lg:col-span-5 space-y-10">

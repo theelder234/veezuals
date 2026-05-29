@@ -24,12 +24,12 @@ function Index() {
   return (
     <>
       {/* HERO */}
-      <section className="container-x pt-12 md:pt-24 pb-24 bg-brand-hero text-[#07090A]">
+      <section className="container-x pt-12 md:pt-24 pb-24">
         <div className="grid lg:grid-cols-12 gap-10 items-end">
           <div className="lg:col-span-8">
-            <p className="eyebrow text-[#07090A]/90">Brand Designer · Est. 2020</p>
-            <h1 className="display-xl mt-6">
-              Design that makes brands <em className="not-italic text-[#07090A]/75">look better,</em> feel stronger, and connect deeper.
+            <p className="eyebrow text-muted-foreground">Brand Designer · Est. 2020</p>
+            <h1 className="display-lg mt-6">
+              Design that makes brands <em className="not-italic text-muted-foreground">look better,</em> feel stronger, and connect deeper.
             </h1>
           </div>
           <div className="lg:col-span-4 flex flex-col gap-6">
@@ -48,7 +48,7 @@ function Index() {
         </div>
 
         <div className="mt-20 grid md:grid-cols-12 gap-6">
-          <div className="md:col-span-8 aspect-[4/3] md:aspect-[16/10] overflow-hidden bg-brand-panel border border-brand-4/40">
+          <div className="md:col-span-8 aspect-[4/3] md:aspect-[16/10] overflow-hidden bg-card">
             <img src={portrait} alt="Victoria Edochie portrait" className="w-full h-full object-cover" width={1024} height={1024} />
           </div>
           <div className="md:col-span-4 flex flex-col justify-between gap-6">
@@ -67,11 +67,12 @@ function Index() {
           </div>
         </div>
       </section>
+      <div className="kente-rule mt-6" />
 
       <Marquee items={["Brand Identity", "Social Design", "Editorial", "Print", "Decks", "Decoration"]} />
 
       {/* SERVICES PREVIEW */}
-      <section className="container-x py-24 bg-brand-panel border border-brand-4/20 text-[#07090A]">
+      <section className="container-x py-24">
         <div className="flex items-end justify-between mb-16">
           <div>
             <p className="eyebrow text-[#07090A]/80">What I do</p>
@@ -89,6 +90,7 @@ function Index() {
           ))}
         </ul>
       </section>
+      <div className="kente-rule mt-6" />
 
       {/* SELECTED WORK PLACEHOLDER */}
       <section className="container-x py-24">
@@ -110,11 +112,12 @@ function Index() {
       </section>
 
       {/* CTA */}
-      <section className="container-x py-32 bg-brand-cta text-brand-inverse">
-        <div className="border-t border-brand-4/50 pt-16">
-          <p className="eyebrow text-brand-inverse/80">Booking design service</p>
+      <section className="container-x py-32">
+        <div className="border-t border-border pt-16">
+          <p className="eyebrow text-muted-foreground">Booking design service</p>
           <h2 className="display-xl mt-6 max-w-4xl">Have a brand worth building? Let's talk.</h2>
-          <Link to="/contact" className="mt-10 inline-flex items-center gap-3 px-6 py-4 bg-white text-[#07090A] text-sm hover:opacity-90">
+          <div className="kente-rule mt-6" />
+          <Link to="/contact" className="mt-10 inline-flex items-center gap-3 px-6 py-4 bg-foreground text-background text-sm hover:opacity-90">
             Start a project →
           </Link>
         </div>

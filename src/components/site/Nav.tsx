@@ -13,7 +13,7 @@ const links = [
 export function Nav() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-brand-panel border-b border-brand-4/40">
+    <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/70 border-b border-border">
       <div className="container-x flex items-center justify-between h-16">
         <Link to="/" className="flex items-center gap-3 font-display text-sm tracking-tight">
           <img src={logo} alt="Veezuals logo" className="h-20 w-auto object-contain" />
@@ -41,7 +41,7 @@ export function Nav() {
         </button>
       </div>
       {open && (
-        <div className="md:hidden bg-brand-panel border-t border-brand-4/20 container-x py-6 flex flex-col gap-4">
+        <div className="md:hidden border-t border-border container-x py-6 flex flex-col gap-4">
           {links.map((l) => (
             <Link
               key={l.to}

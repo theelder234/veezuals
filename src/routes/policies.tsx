@@ -83,9 +83,10 @@ const sections = [
 
 function PoliciesPage() {
   return (
-    <section className="container-x py-24 bg-brand-panel border border-brand-4/20 text-[#07090A]">
-      <p className="eyebrow text-[#07090A]/80">Creative Service Guidelines</p>
+    <section className="container-x py-24">
+      <p className="eyebrow text-muted-foreground">Creative Service Guidelines</p>
       <h1 className="display-xl mt-6 max-w-4xl">How we work together.</h1>
+      <div className="kente-rule mt-6" />
       <p className="mt-6 max-w-2xl text-muted-foreground">
         These guidelines protect both the client and the studio, keeping every project on a clear, respectful, and creative path from brief to delivery.
       </p>
