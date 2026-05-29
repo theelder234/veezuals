@@ -9,6 +9,9 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import { Nav } from "@/components/site/Nav";
+import { Footer } from "@/components/site/Footer";
+
 
 function NotFoundComponent() {
   return (
@@ -72,15 +75,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Victoria Edochie — Brand Designer" },
+      { name: "description", content: "Brand designer helping brands look better, feel stronger, and connect deeper through design." },
+      { property: "og:title", content: "Victoria Edochie — Brand Designer" },
+      { property: "og:description", content: "Brand identity, social, print and editorial design." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+
     links: [
       {
         rel: "stylesheet",
