@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
+import { sendContact } from "../lib/api/contact.functions";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -13,6 +15,7 @@ export const Route = createFileRoute("/contact")({
 });
 
 function ContactPage() {
+  const { loading, setLoading } = useLoadingState();
   return (
     <section className="container-x py-24">
       <p className="eyebrow text-muted-foreground">Contact</p>
@@ -45,14 +48,28 @@ function ContactPage() {
 
         <form
           className="lg:col-span-7 space-y-6"
-          onSubmit={(e) => {
+          onSubmit={async (e) => {
             e.preventDefault();
-            const data = new FormData(e.currentTarget);
-            const subject = encodeURIComponent(`New brief — ${data.get("name")}`);
-            const body = encodeURIComponent(
-              `Name: ${data.get("name")}\nEmail: ${data.get("email")}\nService: ${data.get("service")}\n\n${data.get("message")}`,
-            );
-            window.location.href = `mailto:hello@victoriaedochie.com?subject=${subject}&body=${body}`;
+            const form = e.currentTarget;
+            const data = new FormData(form);
+            const payload = {
+              name: String(data.get("name") ?? ""),
+              email: String(data.get("email") ?? ""),
+              service: String(data.get("service") ?? ""),
+              message: String(data.get("message") ?? ""),
+            };
+
+            try {
+              setLoading(true);
+              await sendContact({ data: payload });
+              alert("Message sent — thanks!");
+              form.reset();
+            } catch (err) {
+              console.error(err);
+              alert("Failed to send message. Please try again later.");
+            } finally {
+              setLoading(false);
+            }
           }}
         >
           <Field label="Your name" name="name" required />
@@ -82,14 +99,20 @@ function ContactPage() {
           </div>
           <button
             type="submit"
+            disabled={loading}
             className="mt-6 inline-flex items-center gap-3 px-6 py-4 bg-foreground text-background text-sm hover:opacity-90"
           >
-            Send brief →
+            {loading ? "Sending…" : "Send brief →"}
           </button>
         </form>
       </div>
     </section>
   );
+}
+
+function useLoadingState() {
+  const [loading, setLoading] = useState(false);
+  return { loading, setLoading };
 }
 
 function Field({ label, name, type = "text", required }: { label: string; name: string; type?: string; required?: boolean }) {

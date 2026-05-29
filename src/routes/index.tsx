@@ -1,11 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import portrait from "@/assets/victoria-portrait.jpg";
+import portrait from "@/assets/ceo.png";
 import { Marquee } from "@/components/site/Marquee";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Veezuals — Brand Designer" },
+      { title: "Veezuals | Brand Designer" },
       { name: "description", content: "Brand designer helping brands look better, feel stronger, and connect deeper through design." },
     ],
   }),
@@ -29,12 +29,12 @@ function Index() {
           <div className="lg:col-span-8">
             <p className="eyebrow text-muted-foreground">Brand Designer · Est. 2020</p>
             <h1 className="display-lg mt-6">
-              Design that makes brands <em className="not-italic text-muted-foreground">look better,</em> feel stronger, and connect deeper.
+             <em className="not-italic text-[#64AEE0]">Crafting Designs</em> that makes brands <em className="not-italic text-[#64AEE0]">Look Better,</em> Feel Stronger, and <em className="not-italic text-[#64AEE0]"> Connect Deeper.</em>
             </h1>
           </div>
           <div className="lg:col-span-4 flex flex-col gap-6">
             <p className="text-base text-muted-foreground max-w-sm">
-              I'm Veezuals — an independent brand designer working across identity, print, social, and editorial. Quiet craft, loud results.
+              I'm Victoria Edochie an independent brand designer working across identity, print, social, and editorial. Quiet craft, loud results.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link to="/contact" className="px-5 py-3 bg-foreground text-background text-sm hover:opacity-90 transition">
@@ -48,8 +48,8 @@ function Index() {
         </div>
 
         <div className="mt-20 grid md:grid-cols-12 gap-6">
-          <div className="md:col-span-8 aspect-[4/3] md:aspect-[16/10] overflow-hidden bg-card">
-            <img src={portrait} alt="Veezuals portrait" className="w-full h-full object-cover" width={1024} height={1024} />
+          <div className="md:col-span-8 aspect-[4/3] bg-transparent md:aspect-[16/10] overflow-hidden bg-card">
+            <img src={portrait} alt="Veezuals portrait" className="w-200 h-full object-contain " />
           </div>
           <div className="md:col-span-4 flex flex-col justify-between gap-6">
             <div className="border border-border p-6">
@@ -75,7 +75,7 @@ function Index() {
       <section className="container-x py-24">
         <div className="flex items-end justify-between mb-16">
           <div>
-            <p className="eyebrow text-[#07090A]/80">What I do</p>
+            <p className="eyebrow text-[#daf2fe]/10">What I do</p>
             <h2 className="display-xl !text-5xl md:!text-6xl mt-4">Services</h2>
           </div>
           <Link to="/services" className="text-sm underline underline-offset-4 hover:opacity-70">All services →</Link>
@@ -116,12 +116,12 @@ function Index() {
         <div className="border-t border-border pt-16">
           <p className="eyebrow text-muted-foreground">Booking design service</p>
           <h2 className="display-xl mt-6 max-w-4xl">Have a brand worth building? Let's talk.</h2>
-          <div className="kente-rule mt-6" />
           <Link to="/contact" className="mt-10 inline-flex items-center gap-3 px-6 py-4 bg-foreground text-background text-sm hover:opacity-90">
             Start a project →
           </Link>
         </div>
       </section>
+          <div className="kente-rule mt-6" />
     </>
   );
 }

@@ -134,15 +134,29 @@
     background: repeating-linear-gradient(
       90deg,
       #07090A 0,
-      #07090A 8%,
-      #64AEE0 8%,
+      #07090A 6%,
+      #64AEE0 6%,
+      #0B1224 16%,
+      #0B1224 22%,
+      #C1E7F9 22%,
+      #EDF8FE 34%,
+      #C1E7F9 34%,
       #64AEE0 16%,
-      #C1E7F9 16%,
-      #C1E7F9 24%,
-      #EDF8FE 24%,
-      #EDF8FE 32%,
-      #DAF2FE 32%,
-      #DAF2FE 40%
+      #EDF8FE 46%,
+      #DAF2FE 46%,
+      #DAF2FE 58%
+       #07090A 2%,
+       #64AEE0 6%,
+       #07090A 6%,
+      #0B1224 16%,
+      #64AEE0 16%,
+      #C1E7F9 22%,
+      #EDF8FE 34%,
+      #C1E7F9 34%,
+      #DAF2FE 46%,
+      #EDF8FE 46%,
+      #0B1224 22%,
+      #DAF2FE 58%
     );
     box-shadow: 0 0 0.5rem rgba(7, 9, 10, 0.08);
   }

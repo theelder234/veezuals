@@ -127,6 +127,21 @@ function RootComponent() {
     return () => window.clearTimeout(timeout);
   }, []);
 
+  useEffect(() => {
+    // Hide page scrollbar while splash is visible
+    if (isSplashVisible) {
+      document.documentElement.style.overflow = "hidden";
+      document.body.style.overflow = "hidden";
+    } else {
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+    };
+  }, [isSplashVisible]);
+
   return (
     <QueryClientProvider client={queryClient}>
       <div className="dark min-h-screen flex flex-col">
