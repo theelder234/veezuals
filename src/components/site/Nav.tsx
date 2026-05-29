@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
+import logo from "@/assets/veezuals-logo.png";
 
 const links = [
   { to: "/", label: "Home" },
@@ -12,10 +13,10 @@ const links = [
 export function Nav() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/70 border-b border-border">
+    <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-brand-panel border-b border-brand-4/40">
       <div className="container-x flex items-center justify-between h-16">
-        <Link to="/" className="flex items-center gap-2 font-display text-sm tracking-tight">
-          <span className="inline-block w-2 h-2 bg-foreground rounded-full" />
+        <Link to="/" className="flex items-center gap-3 font-display text-sm tracking-tight">
+          <img src={logo} alt="Veezuals logo" className="h-20 w-auto object-contain" />
           <span className="font-medium">Veezuals</span>
           {/* <span className="text-muted-foreground hidden sm:inline">— Brand Designer</span> */}
         </Link>
@@ -24,7 +25,7 @@ export function Nav() {
             <Link
               key={l.to}
               to={l.to}
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-[#07090A] hover:text-foreground transition-colors"
               activeProps={{ className: "text-foreground" }}
               activeOptions={{ exact: l.to === "/" }}
             >
@@ -40,7 +41,7 @@ export function Nav() {
         </button>
       </div>
       {open && (
-        <div className="md:hidden border-t border-border container-x py-6 flex flex-col gap-4">
+        <div className="md:hidden bg-brand-panel border-t border-brand-4/20 container-x py-6 flex flex-col gap-4">
           {links.map((l) => (
             <Link
               key={l.to}

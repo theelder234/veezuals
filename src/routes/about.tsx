@@ -15,8 +15,8 @@ export const Route = createFileRoute("/about")({
 
 function AboutPage() {
   return (
-    <section className="container-x py-24">
-      <p className="eyebrow text-muted-foreground">About</p>
+    <section className="container-x py-24 bg-brand-panel border border-brand-4/20 text-[#07090A]">
+      <p className="eyebrow text-[#07090A]/80">About</p>
       <h1 className="display-xl mt-6 max-w-5xl">
         A designer obsessed with the quiet details that make brands unforgettable.
       </h1>

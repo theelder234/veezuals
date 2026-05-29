@@ -47,13 +47,13 @@ const services = [
 
 function ServicesPage() {
   return (
-    <section className="container-x py-24">
-      <p className="eyebrow text-muted-foreground">Services</p>
+    <section className="container-x py-24 bg-brand-panel border border-brand-4/20 text-[#07090A]">
+      <p className="eyebrow text-[#07090A]/80">Services</p>
       <h1 className="display-xl mt-6 max-w-4xl">A full creative service, one quiet point of contact.</h1>
 
       <div className="mt-20 space-y-px bg-border">
         {services.map((s) => (
-          <article key={s.n} className="bg-background p-8 md:p-12 grid md:grid-cols-12 gap-6 md:gap-10">
+          <article key={s.n} className="bg-brand-soft p-8 md:p-12 grid md:grid-cols-12 gap-6 md:gap-10 border-b border-brand-4/20 last:border-b-0">
             <div className="md:col-span-3">
               <p className="text-muted-foreground text-sm">{s.n}</p>
               <h2 className="font-display text-2xl md:text-3xl mt-2">{s.t}</h2>

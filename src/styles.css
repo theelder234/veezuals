@@ -121,6 +121,14 @@
     background: rgba(237, 248, 254, 1);
   }
 
+  .bg-brand-shell {
+    background: radial-gradient(circle at top, rgba(218, 242, 254, 1) 0%, rgba(237, 248, 254, 1) 45%, rgba(100, 174, 224, 0.22) 100%);
+  }
+
+  .bg-brand-soft {
+    background: rgba(218, 242, 254, 0.95);
+  }
+
   .bg-brand-cta {
     background: linear-gradient(135deg, #64AEE0 0%, #0B1224 100%);
   }
