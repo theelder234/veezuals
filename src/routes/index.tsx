@@ -5,7 +5,7 @@ import { Marquee } from "@/components/site/Marquee";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Victoria Edochie — Brand Designer" },
+      { title: "Veezuals — Brand Designer" },
       { name: "description", content: "Brand designer helping brands look better, feel stronger, and connect deeper through design." },
     ],
   }),
@@ -34,7 +34,7 @@ function Index() {
           </div>
           <div className="lg:col-span-4 flex flex-col gap-6">
             <p className="text-base text-muted-foreground max-w-sm">
-              I'm Victoria — an independent brand designer working across identity, print, social, and editorial. Quiet craft, loud results.
+              I'm Veezuals — an independent brand designer working across identity, print, social, and editorial. Quiet craft, loud results.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link to="/contact" className="px-5 py-3 bg-foreground text-background text-sm hover:opacity-90 transition">
@@ -49,7 +49,7 @@ function Index() {
 
         <div className="mt-20 grid md:grid-cols-12 gap-6">
           <div className="md:col-span-8 aspect-[4/3] md:aspect-[16/10] overflow-hidden bg-card">
-            <img src={portrait} alt="Victoria Edochie portrait" className="w-full h-full object-cover" width={1024} height={1024} />
+            <img src={portrait} alt="Veezuals portrait" className="w-full h-full object-cover" width={1024} height={1024} />
           </div>
           <div className="md:col-span-4 flex flex-col justify-between gap-6">
             <div className="border border-border p-6">

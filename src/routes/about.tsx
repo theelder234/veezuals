@@ -4,9 +4,9 @@ import portrait from "@/assets/victoria-portrait.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Victoria Edochie" },
+      { title: "About — Veezuals" },
       { name: "description", content: "Brand designer with 5 years of experience and 20+ satisfied clients across identity, social, and editorial." },
-      { property: "og:title", content: "About — Victoria Edochie" },
+      { property: "og:title", content: "About — Veezuals" },
       { property: "og:description", content: "Five years of design practice across identity, social, print and editorial." },
     ],
   }),
@@ -24,11 +24,11 @@ function AboutPage() {
 
       <div className="mt-20 grid lg:grid-cols-12 gap-10">
         <div className="lg:col-span-5">
-          <img src={portrait} alt="Victoria Edochie" loading="lazy" width={1024} height={1024} className="w-full aspect-[4/5] object-cover" />
+          <img src={portrait} alt="Veezuals" loading="lazy" width={1024} height={1024} className="w-full aspect-[4/5] object-cover" />
         </div>
         <div className="lg:col-span-6 lg:col-start-7 space-y-8 text-base text-muted-foreground leading-relaxed">
           <p className="text-foreground text-lg">
-            Victoria Edochie is an independent brand designer helping brands look better, feel stronger, and connect deeper through considered visual systems.
+            Veezuals is an independent brand designer helping brands look better, feel stronger, and connect deeper through considered visual systems.
           </p>
           <p>
             Her practice spans brand identity, social media design, editorial and book interiors, presentation design, and creative decoration — a deliberately broad range that lets every project speak in its truest visual voice.
@@ -49,7 +49,7 @@ function AboutPage() {
           </div>
 
           <Link to="/contact" className="inline-flex items-center gap-2 px-5 py-3 border border-foreground text-sm text-foreground hover:bg-foreground hover:text-background transition">
-            Work with Victoria →
+            Work with Veezuals →
           </Link>
         </div>
       </div>

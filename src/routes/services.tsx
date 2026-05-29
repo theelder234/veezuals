@@ -3,9 +3,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Victoria Edochie" },
+      { title: "Services — Veezuals" },
       { name: "description", content: "Social media design, flyer design, book interiors, brand presentations, and creative decorations." },
-      { property: "og:title", content: "Services — Victoria Edochie" },
+      { property: "og:title", content: "Services — Veezuals" },
       { property: "og:description", content: "A full creative service for brands that want to look better and connect deeper." },
     ],
   }),

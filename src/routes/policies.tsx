@@ -3,9 +3,9 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/policies")({
   head: () => ({
     meta: [
-      { title: "Creative Service Guidelines — Victoria Edochie" },
-      { name: "description", content: "Payment, revision, timeline, delivery, cancellation, and usage policies for working with Victoria Edochie." },
-      { property: "og:title", content: "Creative Service Guidelines — Victoria Edochie" },
+      { title: "Creative Service Guidelines — Veezuals" },
+      { name: "description", content: "Payment, revision, timeline, delivery, cancellation, and usage policies for working with Veezuals." },
+      { property: "og:title", content: "Creative Service Guidelines — Veezuals" },
       { property: "og:description", content: "How we work together: payment, revisions, timelines, delivery, and usage rights." },
     ],
   }),

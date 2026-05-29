@@ -17,7 +17,7 @@ export function Nav() {
       <div className="container-x flex items-center justify-between h-16">
         <Link to="/" className="flex items-center gap-3 font-display text-sm tracking-tight">
           <img src={logo} alt="Veezuals logo" className="h-20 w-auto object-contain" />
-          <span className="font-medium">Veezuals</span>
+          <span className="alfa-slab-one-regular text-2xl font-medium">Veezuals</span>
           {/* <span className="text-muted-foreground hidden sm:inline">— Brand Designer</span> */}
         </Link>
         <nav className="hidden md:flex items-center gap-8 text-sm">

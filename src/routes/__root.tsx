@@ -10,6 +10,7 @@ import {
 import { useEffect, useState } from "react";
 
 import appCss from "../styles.css?url";
+import favicon from "@/assets/veezuals-logo.png?url";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { Splash } from "@/components/site/Splash";
@@ -77,15 +78,20 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Victoria Edochie — Brand Designer" },
+      { title: "Veezuals — Brand Designer" },
       { name: "description", content: "Brand designer helping brands look better, feel stronger, and connect deeper through design." },
-      { property: "og:title", content: "Victoria Edochie — Brand Designer" },
+      { property: "og:title", content: "Veezuals — Brand Designer" },
       { property: "og:description", content: "Brand identity, social, print and editorial design." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
 
     links: [
+      {
+        rel: "icon",
+        type: "image/png",
+        href: favicon,
+      },
       {
         rel: "stylesheet",
         href: appCss,

@@ -8,9 +8,10 @@ export function Splash() {
           <span />
         </div>
         <div className="splash-copy">
-          <p className="splash-eyebrow">Victoria Edochie</p>
+          <p className="splash-eyebrow">Veezuals</p>
           <h1 className="splash-title">Brand design that feels luminous.</h1>
-          <p className="splash-note">A refined introduction to your brand's next chapter.</p>
+          
+          <p className="splash-note">Crafting Bold Identities.</p>
         </div>
       </div>
     </div>
