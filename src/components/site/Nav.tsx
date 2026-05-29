@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 
 const links = [
-  { to: "/", label: "Index" },
+  { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/services", label: "Services" },
   { to: "/policies", label: "Policies" },
@@ -16,8 +16,8 @@ export function Nav() {
       <div className="container-x flex items-center justify-between h-16">
         <Link to="/" className="flex items-center gap-2 font-display text-sm tracking-tight">
           <span className="inline-block w-2 h-2 bg-foreground rounded-full" />
-          <span className="font-medium">Victoria Edochie</span>
-          <span className="text-muted-foreground hidden sm:inline">— Brand Designer</span>
+          <span className="font-medium">Veezuals</span>
+          {/* <span className="text-muted-foreground hidden sm:inline">— Brand Designer</span> */}
         </Link>
         <nav className="hidden md:flex items-center gap-8 text-sm">
           {links.map((l) => (

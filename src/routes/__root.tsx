@@ -7,10 +7,12 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 
 import appCss from "../styles.css?url";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
+import { Splash } from "@/components/site/Splash";
 
 
 function NotFoundComponent() {
@@ -112,6 +114,12 @@ function RootShell({ children }: { children: React.ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const [isSplashVisible, setSplashVisible] = useState(true);
+
+  useEffect(() => {
+    const timeout = window.setTimeout(() => setSplashVisible(false), 2200);
+    return () => window.clearTimeout(timeout);
+  }, []);
 
   return (
     <QueryClientProvider client={queryClient}>
@@ -121,6 +129,7 @@ function RootComponent() {
           <Outlet />
         </main>
         <Footer />
+        {isSplashVisible && <Splash />}
       </div>
     </QueryClientProvider>
   );
