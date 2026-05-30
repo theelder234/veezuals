@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { KenteRule } from "@/components/site/KenteRule";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -50,7 +51,7 @@ function ServicesPage() {
     <section className="container-x py-24">
       <p className="eyebrow text-muted-foreground">Services</p>
       <h1 className="display-xl mt-6 max-w-4xl">A full creative service, one quiet point of contact.</h1>
-      <div className="kente-rule mt-6" />
+      <KenteRule className="mt-6" />
 
       <div className="mt-20 space-y-px bg-border">
         {services.map((s) => (

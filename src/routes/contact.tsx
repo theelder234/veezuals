@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { sendContact } from "../lib/api/contact.functions";
+import { KenteRule } from "@/components/site/KenteRule";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -20,7 +21,6 @@ function ContactPage() {
     <section className="container-x py-24">
       <p className="eyebrow text-muted-foreground">Contact</p>
       <h1 className="display-xl mt-6 max-w-4xl">Let's build something that lasts.</h1>
-      <div className="kente-rule mt-6" />
 
       <div className="mt-20 grid lg:grid-cols-12 gap-12">
         <div className="lg:col-span-5 space-y-10">
@@ -106,6 +106,7 @@ function ContactPage() {
           </button>
         </form>
       </div>
+<KenteRule className="mt-6" />
     </section>
   );
 }

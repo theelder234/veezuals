@@ -15,9 +15,9 @@ export function Nav() {
   return (
     <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/10 border-b border-border">
       <div className="container-x flex items-center justify-between h-16">
-        <Link to="/" className="flex items-center gap-3 font-display text-sm tracking-tight">
+        <Link to="/" className="flex items-center font-display text-sm tracking-tight">
           <img src={logo} alt="Veezuals logo" className="h-20 w-auto object-contain" />
-          <span className="alfa-slab-one-regular text-2xl font-bold">Veezuals</span>
+          <span className="emizen-regular text-2xl font-bold -ml-5">Veezuals</span>
           {/* <span className="text-muted-foreground hidden sm:inline">— Brand Designer</span> */}
         </Link>
         <nav className="hidden md:flex items-center gap-8 text-sm">

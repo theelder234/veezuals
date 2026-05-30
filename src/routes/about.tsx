@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import portrait from "@/assets/ceo.png";
+import { KenteRule } from "@/components/site/KenteRule";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -20,7 +21,6 @@ function AboutPage() {
       <h1 className="display-xl mt-6 max-w-5xl">
         A designer obsessed with the quiet details that make brands unforgettable.
       </h1>
-      <div className="kente-rule mt-6" />
 
       <div className="mt-20 grid lg:grid-cols-12 gap-10">
         <div className="lg:col-span-5">
@@ -53,6 +53,7 @@ function AboutPage() {
           </Link>
         </div>
       </div>
+      <KenteRule className="mt-6" />
     </section>
   );
 }

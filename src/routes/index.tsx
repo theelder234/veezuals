@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import portrait from "@/assets/ceo.png";
+import { KenteRule } from "@/components/site/KenteRule";
 import { Marquee } from "@/components/site/Marquee";
 
 export const Route = createFileRoute("/")({
@@ -67,7 +68,7 @@ function Index() {
           </div>
         </div>
       </section>
-      <div className="kente-rule mt-6" />
+      <KenteRule className="mt-6" />
 
       <Marquee items={["Brand Identity", "Social Design", "Editorial", "Print", "Decks", "Decoration"]} />
 
@@ -90,7 +91,7 @@ function Index() {
           ))}
         </ul>
       </section>
-      <div className="kente-rule mt-6" />
+      <KenteRule className="mt-6" />
 
       {/* SELECTED WORK PLACEHOLDER */}
       <section className="container-x py-24">
@@ -107,7 +108,7 @@ function Index() {
           ))}
         </div>
         <p className="text-sm text-muted-foreground mt-8 max-w-md">
-          Best projects and client testimonials will be compiled and published here shortly.
+          Best projects and client testimonials.  
         </p>
       </section>
 
@@ -121,7 +122,7 @@ function Index() {
           </Link>
         </div>
       </section>
-          <div className="kente-rule mt-6" />
+          <KenteRule className="mt-6" />
     </>
   );
 }
