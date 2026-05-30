@@ -5,6 +5,7 @@ import logo from "@/assets/veezuals-logo.png";
 const links = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
+  { to: "/gallery", label: "Gallery" },
   { to: "/services", label: "Services" },
   { to: "/policies", label: "Policies" },
   { to: "/contact", label: "Contact" },

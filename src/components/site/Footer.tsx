@@ -4,7 +4,7 @@ import logo from "@/assets/veezuals-logo.png";
 
 export function Footer() {
   return (
-    <footer className="border-t border-border mt-32">
+    <footer className="border-t border-border">
       <div className="container-x py-16 grid gap-12 md:grid-cols-3">
         <div>
           <Link to="/" className="flex items-center font-display text-sm tracking-tight">
@@ -21,6 +21,7 @@ export function Footer() {
           <p className="eyebrow text-muted-foreground">Navigate</p>
           <ul className="mt-4 space-y-2 text-sm">
             <li><Link to="/about" className="hover:text-foreground text-muted-foreground">About</Link></li>
+            <li><Link to="/gallery" className="hover:text-foreground text-muted-foreground">Gallery</Link></li>
             <li><Link to="/services" className="hover:text-foreground text-muted-foreground">Services</Link></li>
             <li><Link to="/policies" className="hover:text-foreground text-muted-foreground">Policies</Link></li>
             <li><Link to="/contact" className="hover:text-foreground text-muted-foreground">Contact</Link></li>

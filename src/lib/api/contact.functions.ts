@@ -31,7 +31,7 @@ export const sendContact = createServerFn({ method: "POST" })
         : undefined,
     });
 
-    const to = process.env.EMAIL_TO ?? "hello@victoriaedochie.com";
+    const to = process.env.EMAIL_TO ?? "designsbyveezuals@gmail.com";
     const from = process.env.EMAIL_FROM ?? data.email;
 
     const mailOptions = {

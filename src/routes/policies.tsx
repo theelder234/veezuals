@@ -84,29 +84,30 @@ const sections = [
 
 function PoliciesPage() {
   return (
-    <section className="container-x py-24">
+    <section className="container-x py-24 bg-[#DAF2FE]">
       <p className="eyebrow text-muted-foreground">Creative Service Guidelines</p>
-      <h1 className="display-xl mt-6 max-w-4xl">How we work together.</h1>
+      <h1 className="display-lg mt-6 max-w-4xl text-[#07090A]">How we work
+        <br /> together.</h1>
       <p className="mt-6 max-w-2xl text-muted-foreground">
         These guidelines protect both the client and the studio, keeping every project on a clear, respectful, and creative path from brief to delivery.
       </p>
 
-      <div className="mt-20 grid gap-px bg-border md:grid-cols-2">
+      <div className="mt-20 grid gap-px border  md:grid-cols-2 bg-[#C1E7F9] text-[#07090A]">
         {sections.map((s) => (
-          <article key={s.n} className="bg-background p-8 md:p-10">
-            <div className="flex items-baseline gap-4">
+          <article key={s.n} className="bg-[#EDF8FE] p-8 md:p-10">
+            <div className="flex items-baseline  gap-4">
               <span className="text-muted-foreground text-sm">{s.n}</span>
               <h2 className="font-display text-2xl">{s.t}</h2>
             </div>
             <ul className="mt-6 space-y-4 text-sm text-muted-foreground leading-relaxed">
               {s.body.map((b, i) => (
-                <li key={i} className="border-l border-border pl-4">{b}</li>
+                <li key={i} className="border-l  pl-4 border-[#07090A]">{b}</li>
               ))}
             </ul>
           </article>
         ))}
       </div>
-<KenteRule className="mt-6" />
+{/* <KenteRule className="mt-6" /> */}
     </section>
   );
 }

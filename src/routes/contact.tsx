@@ -1,12 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
+import { Instagram, Linkedin, ExternalLink } from "lucide-react";
 import { sendContact } from "../lib/api/contact.functions";
 import { KenteRule } from "@/components/site/KenteRule";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Veezuals" },
+      { title: "Contact | Veezuals" },
       { name: "description", content: "Book a design service with Veezuals. Brand identity, social, print, and editorial." },
       { property: "og:title", content: "Contact — Veezuals" },
       { property: "og:description", content: "Get in touch to book a creative project." },
@@ -18,16 +19,23 @@ export const Route = createFileRoute("/contact")({
 function ContactPage() {
   const { loading, setLoading } = useLoadingState();
   return (
-    <section className="container-x py-24">
+    <section className="container-x py-24 bg-[#EDF8FE] text-[#07090A]">
       <p className="eyebrow text-muted-foreground">Contact</p>
-      <h1 className="display-xl mt-6 max-w-4xl">Let's build something that lasts.</h1>
+      <h1 className="display-lg mt-6 max-w-4xl">Let's build something 
+        <br /> that lasts.</h1>
 
       <div className="mt-20 grid lg:grid-cols-12 gap-12">
         <div className="lg:col-span-5 space-y-10">
           <div>
             <p className="eyebrow text-muted-foreground">Email</p>
-            <a href="mailto:hello@victoriaedochie.com" className="block mt-3 font-display text-2xl md:text-3xl hover:opacity-70 transition">
-              hello@victoriaedochie.com
+            <a href="mailto:designsbyveezuals@gmail.com" className="block mt-3 font-display text-2xl md:text-3xl hover:opacity-70 transition">
+              designsbyveezuals@gmail.com
+            </a>
+          </div>
+          <div>
+            <p className="eyebrow text-muted-foreground">Phone</p>
+            <a href="tel:+2349068716986" className="block mt-3 font-display text-2xl md:text-3xl hover:opacity-70 transition">
+              +234 906 871 6986
             </a>
           </div>
           <div>
@@ -39,9 +47,24 @@ function ContactPage() {
           <div>
             <p className="eyebrow text-muted-foreground">Elsewhere</p>
             <ul className="mt-3 space-y-2 text-sm">
-              <li><a href="#" className="hover:text-foreground text-muted-foreground">Instagram ↗</a></li>
-              <li><a href="#" className="hover:text-foreground text-muted-foreground">Behance ↗</a></li>
-              <li><a href="#" className="hover:text-foreground text-muted-foreground">LinkedIn ↗</a></li>
+              <li>
+                <a href="#" className="hover:text-[#07090A] text-muted-foreground flex items-center gap-2">
+                  <Instagram className="h-4 w-4" />
+                  Instagram ↗
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#07090A] text-muted-foreground flex items-center gap-2">
+                  <ExternalLink className="h-4 w-4" />
+                  Behance ↗
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#07090A] text-muted-foreground flex items-center gap-2">
+                  <Linkedin className="h-4 w-4" />
+                  LinkedIn ↗
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -78,14 +101,14 @@ function ContactPage() {
             <label className="eyebrow text-muted-foreground block mb-3">Service of interest</label>
             <select
               name="service"
-              className="w-full bg-transparent border-b border-border py-3 text-base focus:outline-none focus:border-foreground"
+              className="w-full bg-[#EDF8FE] border-b border-border py-3 text-base focus:outline-none focus:border-foreground"
             >
-              <option className="bg-background">Social media design</option>
-              <option className="bg-background">Flyer design</option>
-              <option className="bg-background">Book interior design</option>
-              <option className="bg-background">Brand presentation</option>
-              <option className="bg-background">Creative decoration</option>
-              <option className="bg-background">Something else</option>
+              <option className="bg-[#EDF8FE]">Social media design</option>
+              <option className="bg-[#EDF8FE]">Flyer design</option>
+              <option className="bg-[#EDF8FE]">Book interior design</option>
+              <option className="bg-[#EDF8FE]">Brand presentation</option>
+              <option className="bg-[#EDF8FE]">Creative decoration</option>
+              <option className="bg-[#EDF8FE]">Something else</option>
             </select>
           </div>
           <div>
@@ -94,13 +117,13 @@ function ContactPage() {
               name="message"
               rows={5}
               required
-              className="w-full bg-transparent border-b border-border py-3 text-base focus:outline-none focus:border-foreground resize-none"
+              className="w-full bg-[#EDF8FE] border-b border-[#07090A] py-3 text-base focus:outline-none focus:border-foreground resize-none"
             />
           </div>
           <button
             type="submit"
             disabled={loading}
-            className="mt-6 inline-flex items-center gap-3 px-6 py-4 bg-foreground text-background text-sm hover:opacity-90"
+            className="mt-6 border border-[#07090A] inline-flex items-center gap-3 px-6 py-4 bg-foreground text-background text-sm hover:opacity-90"
           >
             {loading ? "Sending…" : "Send brief →"}
           </button>
@@ -124,7 +147,7 @@ function Field({ label, name, type = "text", required }: { label: string; name: 
         name={name}
         type={type}
         required={required}
-        className="w-full bg-transparent border-b border-border py-3 text-base focus:outline-none focus:border-foreground"
+        className="w-full bg-transparent border-b border-[#07090A] py-3 text-base focus:outline-none focus:border-foreground"
       />
     </div>
   );

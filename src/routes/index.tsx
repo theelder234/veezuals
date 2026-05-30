@@ -75,15 +75,15 @@ function Index() {
           </div>
           <div className="md:col-span-4 flex flex-col justify-between gap-6">
             <div className="border border-border p-6">
-              <p className="display-xl !text-6xl count-animation">05</p>
+              <p className="display-lg !text-6xl count-animation">05</p>
               <p className="eyebrow mt-3 text-muted-foreground">Years of practice</p>
             </div>
             <div className="border border-border p-6">
-              <p className="display-xl !text-6xl count-animation">20+</p>
+              <p className="display-lg !text-6xl count-animation">20+</p>
               <p className="eyebrow mt-3 text-muted-foreground">Satisfied clients</p>
             </div>
             <div className="border border-border p-6">
-              <p className="display-xl !text-6xl">∞</p>
+              <p className="display-lg !text-6xl">∞</p>
               <p className="eyebrow mt-3 text-muted-foreground">Brand stories told</p>
             </div>
           </div>
@@ -98,7 +98,7 @@ function Index() {
         <div className="flex items-end justify-between mb-16">
           <div>
             <p className="eyebrow text-[#daf2fe]/10">What I do</p>
-            <h2 className="display-xl !text-5xl md:!text-6xl mt-4">Services</h2>
+            <h2 className="display-lg !text-5xl md:!text-6xl mt-4">Services</h2>
           </div>
           <Link to="/services" className="text-sm underline underline-offset-4 hover:opacity-70">All services →</Link>
         </div>
@@ -116,8 +116,13 @@ function Index() {
 
       {/* SELECTED WORK PLACEHOLDER */}
       <section className="container-x py-24">
-        <p className="eyebrow text-muted-foreground">My Designs</p>
-        <h2 className="display-xl !text-5xl md:!text-6xl mt-4 mb-12">Selected work</h2>
+        <div className="flex items-end justify-between mb-12">
+          <div>
+            <p className="eyebrow text-muted-foreground">My Designs</p>
+            <h2 className="display-lg !text-5xl md:!text-6xl mt-4">Selected work</h2>
+          </div>
+          <Link to="/gallery" className="text-sm underline underline-offset-4 hover:opacity-70">View all →</Link>
+        </div>
         <div className="grid md:grid-cols-3 gap-6">
           {projectCards.map(({ src, label, title }, index) => (
             <div key={index} className="aspect-[4/5] bg-card border border-border overflow-hidden">

@@ -123,7 +123,26 @@ function RootComponent() {
   const [isSplashVisible, setSplashVisible] = useState(true);
 
   useEffect(() => {
-    const timeout = window.setTimeout(() => setSplashVisible(false), 2200);
+    // Play splash only if it hasn't been played before in this browser
+    try {
+      const played = window.localStorage.getItem("splashPlayed");
+      if (played) {
+        setSplashVisible(false);
+        return;
+      }
+    } catch (e) {
+      // ignore localStorage errors
+    }
+
+    const timeout = window.setTimeout(() => {
+      setSplashVisible(false);
+      try {
+        window.localStorage.setItem("splashPlayed", "1");
+      } catch (e) {
+        /* ignore */
+      }
+    }, 2200);
+
     return () => window.clearTimeout(timeout);
   }, []);
 

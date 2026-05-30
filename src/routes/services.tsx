@@ -48,14 +48,14 @@ const services = [
 
 function ServicesPage() {
   return (
-    <section className="container-x py-24">
-      <p className="eyebrow text-muted-foreground">Services</p>
-      <h1 className="display-xl mt-6 max-w-4xl">A full creative service, one quiet point of contact.</h1>
-      <KenteRule className="mt-6" />
+    <section className="container-x py-24 bg-[#64AEE0]">
+      <p className="eyebrow text-light">Services</p>
+      <h1 className="display-lg mt-6 max-w-4xl">A full creative service, one quiet point of contact.</h1>
+      {/* <KenteRule className="mt-6" /> */}
 
       <div className="mt-20 space-y-px bg-border">
         {services.map((s) => (
-          <article key={s.n} className="bg-background p-8 md:p-12 grid md:grid-cols-12 gap-6 md:gap-10">
+          <article key={s.n} className="bg-[#DAF2FE] text-[#07090A] p-8 md:p-12 grid md:grid-cols-12 gap-6 md:gap-10">
             <div className="md:col-span-3">
               <p className="text-muted-foreground text-sm">{s.n}</p>
               <h2 className="font-display text-2xl md:text-3xl mt-2">{s.t}</h2>
@@ -74,7 +74,7 @@ function ServicesPage() {
 
       <div className="mt-24 border-t border-border pt-12 flex flex-col md:flex-row justify-between gap-8">
         <p className="font-display text-3xl md:text-4xl max-w-xl">
-          Not sure which service fits? Tell me about the project — I'll guide you.
+          Not sure which service fits? Tell me about the project, I'll guide you.
         </p>
         <Link to="/contact" className="self-start px-6 py-4 bg-foreground text-background text-sm hover:opacity-90">
           Start a project →

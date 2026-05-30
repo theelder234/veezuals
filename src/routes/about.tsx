@@ -16,9 +16,9 @@ export const Route = createFileRoute("/about")({
 
 function AboutPage() {
   return (
-    <section className="container-x py-24">
+    <section className="container-x py-24 bg-[#07090A] text-[#EDF8FE]">
       <p className="eyebrow text-muted-foreground">About</p>
-      <h1 className="display-xl mt-6 max-w-5xl">
+      <h1 className="display-lg mt-6 max-w-5xl">
         A designer obsessed with the quiet details that make brands unforgettable.
       </h1>
 
@@ -39,11 +39,11 @@ function AboutPage() {
 
           <div className="grid grid-cols-2 gap-6 pt-8 border-t border-border">
             <div>
-              <p className="display-xl !text-5xl text-foreground count-animation">05</p>
+              <p className="display-lg !text-5xl text-foreground count-animation">05</p>
               <p className="eyebrow mt-2">Years of experience</p>
             </div>
             <div>
-              <p className="display-xl !text-5xl text-foreground count-animation">20+</p>
+              <p className="display-lg !text-5xl text-foreground count-animation">20+</p>
               <p className="eyebrow mt-2">Satisfied clients</p>
             </div>
           </div>
