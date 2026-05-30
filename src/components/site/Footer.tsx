@@ -14,7 +14,7 @@ export function Footer() {
                   </Link>
            
           <p className="mt-2 text-sm text-muted-foreground max-w-xs">
-            Helping brands look better, feel stronger, and connect deeper through design.
+            Helping brandreduce all s look better, feel stronger, and connect deeper through design.
           </p>
         </div>
         <div>

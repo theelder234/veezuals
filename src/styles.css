@@ -124,6 +124,21 @@
     font-style: normal;
   }
 
+  @keyframes count-up {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .count-animation {
+    animation: count-up 1.5s ease-out forwards;
+  }
+
   .display-lg {
     font-family: var(--font-display);
     font-weight: 500;

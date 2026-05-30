@@ -8,7 +8,7 @@ export function Splash() {
           <span />
         </div>
         <div className="splash-copy">
-          <p className="splash-eyebrow">Veezuals</p>
+          <p className="splash-eyebrow emizen-regular">Veezuals</p>
           <h1 className="splash-title">Brand design that feels luminous.</h1>
           
           <p className="splash-note">Crafting Bold Identities.</p>

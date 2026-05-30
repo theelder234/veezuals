@@ -1,5 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import portrait from "@/assets/ceo.png";
+import portrait from  "@/assets/ceo.png";
+import faithAdventure from "@/assets/projects/Church Program Branding - Faith Adventure/1001988195.jpg";
+import soundsOfHealing from "@/assets/projects/Church Program Branding - Sounds of Healing/1001938317.jpg";
+import glciccFlyer from "@/assets/projects/Flyer Designs for GLCICC/20260113_102553.jpg";
+import ladiesAliveFlyer from "@/assets/projects/Flyer Designs for Ladies Alive Global Institute l/20260207_235015.jpg";
+import shaZefaLogo from "@/assets/projects/Logo for Sha_zefa/20260422_115037.png";
+import myLogo from "@/assets/projects/My Logo/20250117_172513.png";
+import northstarBranding from "@/assets/projects/Northstar Academy Branding/20260110_151745.png";
+import schoolCampaign from "@/assets/projects/School Campaign Designs/20250925_192739.jpg";
+import underscoredPremiere from "@/assets/projects/Underscored Movie Premiere Branding/Underscored (1).jpg";
 import { KenteRule } from "@/components/site/KenteRule";
 import { Marquee } from "@/components/site/Marquee";
 
@@ -22,6 +31,18 @@ const services = [
 ];
 
 function Index() {
+  const projectCards = [
+    { src: faithAdventure, label: "Case 01", title: "Faith Adventure branding" },
+    { src: soundsOfHealing, label: "Case 02", title: "Sounds of Healing identity" },
+    { src: glciccFlyer, label: "Case 03", title: "GLCICC flyer design" },
+    { src: ladiesAliveFlyer, label: "Case 04", title: "Ladies Alive campaign flyer" },
+    { src: shaZefaLogo, label: "Case 05", title: "Sha_zefa logo" },
+    { src: myLogo, label: "Case 06", title: "Logo concept" },
+    { src: northstarBranding, label: "Case 07", title: "Northstar Academy branding" },
+    { src: schoolCampaign, label: "Case 08", title: "School campaign design" },
+    { src: underscoredPremiere, label: "Case 09", title: "Movie premiere branding" },
+  ];
+
   return (
     <>
       {/* HERO */}
@@ -54,11 +75,11 @@ function Index() {
           </div>
           <div className="md:col-span-4 flex flex-col justify-between gap-6">
             <div className="border border-border p-6">
-              <p className="display-xl !text-6xl">05</p>
+              <p className="display-xl !text-6xl count-animation">05</p>
               <p className="eyebrow mt-3 text-muted-foreground">Years of practice</p>
             </div>
             <div className="border border-border p-6">
-              <p className="display-xl !text-6xl">20+</p>
+              <p className="display-xl !text-6xl count-animation">20+</p>
               <p className="eyebrow mt-3 text-muted-foreground">Satisfied clients</p>
             </div>
             <div className="border border-border p-6">
@@ -95,20 +116,21 @@ function Index() {
 
       {/* SELECTED WORK PLACEHOLDER */}
       <section className="container-x py-24">
-        <p className="eyebrow text-muted-foreground">Selected work</p>
-        <h2 className="display-xl !text-5xl md:!text-6xl mt-4 mb-12">Coming soon.</h2>
+        <p className="eyebrow text-muted-foreground">My Designs</p>
+        <h2 className="display-xl !text-5xl md:!text-6xl mt-4 mb-12">Selected work</h2>
         <div className="grid md:grid-cols-3 gap-6">
-          {[1, 2, 3].map((i) => (
-            <div key={i} className="aspect-[4/5] bg-card border border-border flex items-end p-6">
-              <div>
-                <p className="eyebrow text-muted-foreground">Case 0{i}</p>
-                <p className="font-display text-xl mt-2">A new project arrives soon.</p>
+          {projectCards.map(({ src, label, title }, index) => (
+            <div key={index} className="aspect-[4/5] bg-card border border-border overflow-hidden">
+              <img src={src} alt={title} className="w-full h-full object-cover" />
+              <div className="p-6 bg-background/80 backdrop-blur-sm">
+                <p className="eyebrow text-muted-foreground">{label}</p>
+                <p className="font-display text-xl mt-2">{title}</p>
               </div>
             </div>
           ))}
         </div>
         <p className="text-sm text-muted-foreground mt-8 max-w-md">
-          Best projects and client testimonials.  
+          Best projects and client testimonials.
         </p>
       </section>
 
@@ -116,7 +138,9 @@ function Index() {
       <section className="container-x py-32">
         <div className="border-t border-border pt-16">
           <p className="eyebrow text-muted-foreground">Booking design service</p>
-          <h2 className="display-xl mt-6 max-w-4xl">Have a brand worth building? Let's talk.</h2>
+          <h2 className="display-lg mt-6 max-w-4xl">Have a brand
+             <br /> worth building?
+             <br /> Let's talk.</h2>
           <Link to="/contact" className="mt-10 inline-flex items-center gap-3 px-6 py-4 bg-foreground text-background text-sm hover:opacity-90">
             Start a project →
           </Link>

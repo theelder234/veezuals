@@ -39,17 +39,17 @@ function AboutPage() {
 
           <div className="grid grid-cols-2 gap-6 pt-8 border-t border-border">
             <div>
-              <p className="display-xl !text-5xl text-foreground">05</p>
+              <p className="display-xl !text-5xl text-foreground count-animation">05</p>
               <p className="eyebrow mt-2">Years of experience</p>
             </div>
             <div>
-              <p className="display-xl !text-5xl text-foreground">20+</p>
+              <p className="display-xl !text-5xl text-foreground count-animation">20+</p>
               <p className="eyebrow mt-2">Satisfied clients</p>
             </div>
           </div>
 
           <Link to="/contact" className="inline-flex items-center gap-2 px-5 py-3 border border-foreground text-sm text-foreground hover:bg-foreground hover:text-background transition">
-            Work with Veezuals →
+            <span className="emizen-regular">Work with Veezuals</span> →
           </Link>
         </div>
       </div>
