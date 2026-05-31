@@ -32,15 +32,15 @@ const services = [
 
 function Index() {
   const projectCards = [
-    { src: faithAdventure, label: "Case 01", title: "Faith Adventure branding" },
+    // { src: faithAdventure, label: "Case 01", title: "Faith Adventure branding" },
     { src: soundsOfHealing, label: "Case 02", title: "Sounds of Healing identity" },
-    { src: glciccFlyer, label: "Case 03", title: "GLCICC flyer design" },
-    { src: ladiesAliveFlyer, label: "Case 04", title: "Ladies Alive campaign flyer" },
-    { src: shaZefaLogo, label: "Case 05", title: "Sha_zefa logo" },
-    { src: myLogo, label: "Case 06", title: "Logo concept" },
+    // { src: glciccFlyer, label: "Case 03", title: "GLCICC flyer design" },
+    // { src: ladiesAliveFlyer, label: "Case 04", title: "Ladies Alive campaign flyer" },
+    // { src: shaZefaLogo, label: "Case 05", title: "Sha_zefa logo" },
+    // { src: myLogo, label: "Case 06", title: "Logo concept" },
     { src: northstarBranding, label: "Case 07", title: "Northstar Academy branding" },
     { src: schoolCampaign, label: "Case 08", title: "School campaign design" },
-    { src: underscoredPremiere, label: "Case 09", title: "Movie premiere branding" },
+    // { src: underscoredPremiere, label: "Case 09", title: "Movie premiere branding" },
   ];
 
   return (
@@ -56,7 +56,7 @@ function Index() {
           </div>
           <div className="lg:col-span-4 flex flex-col gap-6">
             <p className="text-base text-muted-foreground max-w-sm">
-              I'm Victoria Edochie an independent brand designer working across identity, print, social, and editorial. Quiet craft, loud results.
+              I'm Victoria Edochie an independent brand designer working across brand identity, flyers, social media designs, and editorial. Quietly crafting, loud results.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link to="/contact" className="px-5 py-3 bg-foreground text-background text-sm hover:opacity-90 transition">
@@ -70,34 +70,18 @@ function Index() {
         </div>
 
         <div className="mt-20 grid md:grid-cols-12 gap-6">
-          <div className="md:col-span-8 aspect-[4/3] bg-transparent md:aspect-[16/10] overflow-hidden bg-card">
-            <img src={portrait} alt="Veezuals portrait" className="w-200 h-full object-contain " />
-          </div>
-          <div className="md:col-span-4 flex flex-col justify-between gap-6">
-            <div className="border border-border p-6">
-              <p className="display-lg !text-6xl count-animation">05</p>
-              <p className="eyebrow mt-3 text-muted-foreground">Years of practice</p>
-            </div>
-            <div className="border border-border p-6">
-              <p className="display-lg !text-6xl count-animation">20+</p>
-              <p className="eyebrow mt-3 text-muted-foreground">Satisfied clients</p>
-            </div>
-            <div className="border border-border p-6">
-              <p className="display-lg !text-6xl">∞</p>
-              <p className="eyebrow mt-3 text-muted-foreground">Brand stories told</p>
-            </div>
-          </div>
+          
         </div>
       </section>
-      <KenteRule className="mt-6" />
+      {/* <KenteRule className="mt-6" /> */}
 
-      <Marquee items={["Brand Identity", "Social Design", "Editorial", "Print", "Decks", "Decoration"]} />
+      <Marquee items={["Brand Identity", "Graphic Design", "Banners", "Logo Design", "Book Design", "Flyers"]} className="bg-[#EDF8FE] text-[#07090A]" />
 
       {/* SERVICES PREVIEW */}
       <section className="container-x py-24">
         <div className="flex items-end justify-between mb-16">
           <div>
-            <p className="eyebrow text-[#daf2fe]/10">What I do</p>
+            <p className="eyebrow text-[#daf2fe]">What I do</p>
             <h2 className="display-lg !text-5xl md:!text-6xl mt-4">Services</h2>
           </div>
           <Link to="/services" className="text-sm underline underline-offset-4 hover:opacity-70">All services →</Link>
@@ -115,13 +99,13 @@ function Index() {
       <KenteRule className="mt-6" />
 
       {/* SELECTED WORK PLACEHOLDER */}
-      <section className="container-x py-24">
+      <section className="container-x py-24 bg-white">
         <div className="flex items-end justify-between mb-12">
           <div>
-            <p className="eyebrow text-muted-foreground">My Designs</p>
-            <h2 className="display-lg !text-5xl md:!text-6xl mt-4">Selected work</h2>
+            <p className="eyebrow text-blue-500">My Designs</p>
+            <h2 className="text-[#07090A] display-lg !text-5xl md:!text-6xl mt-4">Selected work</h2>
           </div>
-          <Link to="/gallery" className="text-sm underline underline-offset-4 hover:opacity-70">View all →</Link>
+          <Link to="/gallery" className="text-blue-900 text-sm underline underline-offset-4 hover:opacity-70">View all →</Link>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {projectCards.map(({ src, label, title }, index) => (
@@ -135,7 +119,7 @@ function Index() {
           ))}
         </div>
         <p className="text-sm text-muted-foreground mt-8 max-w-md">
-          Best projects and client testimonials.
+          {/* Best projects and client testimonials. */}
         </p>
       </section>
 
@@ -143,9 +127,10 @@ function Index() {
       <section className="container-x py-32">
         <div className="border-t border-border pt-16">
           <p className="eyebrow text-muted-foreground">Booking design service</p>
-          <h2 className="display-lg mt-6 max-w-4xl">Have a brand
-             <br /> worth building?
-             <br /> Let's talk.</h2>
+          <h2 className="display-lg mt-6 max-w-4xl">Have a <em className="text-blue-200">brand</em>
+             <br /> <em className="text-blue-200">worth</em> building?
+             <br /> Let's <em className="text-blue-200">talk.</em>
+             </h2>
           <Link to="/contact" className="mt-10 inline-flex items-center gap-3 px-6 py-4 bg-foreground text-background text-sm hover:opacity-90">
             Start a project →
           </Link>

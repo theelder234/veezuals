@@ -19,7 +19,9 @@ function AboutPage() {
     <section className="container-x py-24 bg-[#07090A] text-[#EDF8FE]">
       <p className="eyebrow text-muted-foreground">About</p>
       <h1 className="display-lg mt-6 max-w-5xl">
-        A designer obsessed with the quiet details that make brands unforgettable.
+        A designer <em className="text-[#C1E7F9]"> obsessed with </em> 
+        the <br />
+         details <em className="text-[#C1E7F9]">that makes</em> brands <em className="text-[#C1E7F9]"> unforgettable.</em>
       </h1>
 
       <div className="mt-20 grid lg:grid-cols-12 gap-10">
@@ -28,13 +30,20 @@ function AboutPage() {
         </div>
         <div className="lg:col-span-6 lg:col-start-7 space-y-8 text-base text-muted-foreground leading-relaxed">
           <p className="text-foreground text-lg">
-            Veezuals is an independent brand designer helping brands look better, feel stronger, and connect deeper through considered visual systems.
+            Victoria Edochie is the Founder and CEO of Veezuals, she's a brand designer
+            that helps brands look better, feel stronger, and connect deeper through considered visual systems.
           </p>
           <p>
-            Her practice spans brand identity, social media design, editorial and book interiors, presentation design, and creative decoration — a deliberately broad range that lets every project speak in its truest visual voice.
+            Her practice spans brand identity, 
+            social media design, 
+            editorial and book interiors,
+             presentation design, 
+             and creative decoration. 
+             A deliberately broad range that lets 
+             every project speak in its truest visual voice.
           </p>
           <p>
-            With five years of focused practice and over twenty satisfied clients, her work is rooted in restraint: minimal where it counts, expressive where it matters.
+            With five years of focused practice and over twenty satisfied clients, her work is rooted in restraint. Its minimal where it counts and expressive where it matters.
           </p>
 
           <div className="grid grid-cols-2 gap-6 pt-8 border-t border-border">

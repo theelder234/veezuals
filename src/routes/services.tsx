@@ -50,7 +50,8 @@ function ServicesPage() {
   return (
     <section className="container-x py-24 bg-[#64AEE0]">
       <p className="eyebrow text-light">Services</p>
-      <h1 className="display-lg mt-6 max-w-4xl">A full creative service, one quiet point of contact.</h1>
+      <h1 className="display-lg mt-6 max-w-4xl">A full <em className="text-[#07090A]">creative service,</em> <br />
+      one quiet  <em className="text-[#07090A]">point of contact. </em></h1>
       {/* <KenteRule className="mt-6" /> */}
 
       <div className="mt-20 space-y-px bg-border">
@@ -64,7 +65,7 @@ function ServicesPage() {
             <ul className="md:col-span-4 space-y-2 text-sm">
               {s.deliverables.map((d) => (
                 <li key={d} className="flex items-center gap-3">
-                  <span className="w-1 h-1 bg-foreground rounded-full" /> {d}
+                  <span className="w-2 h-2 bg-[#64AEE0] rounded-full shrink-0" /> {d}
                 </li>
               ))}
             </ul>

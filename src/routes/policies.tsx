@@ -87,7 +87,7 @@ function PoliciesPage() {
     <section className="container-x py-24 bg-[#DAF2FE]">
       <p className="eyebrow text-muted-foreground">Creative Service Guidelines</p>
       <h1 className="display-lg mt-6 max-w-4xl text-[#07090A]">How we work
-        <br /> together.</h1>
+        <br /> <span className="border text-[#64AEE0] mb-5">together.</span></h1>
       <p className="mt-6 max-w-2xl text-muted-foreground">
         These guidelines protect both the client and the studio, keeping every project on a clear, respectful, and creative path from brief to delivery.
       </p>

@@ -39,7 +39,7 @@ export function Footer() {
       </div>
       <div className="container-x py-6 border-t border-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs emizen-regular">
         <p>© {new Date().getFullYear()} Veezuals. All rights reserved.</p>
-        <p>Brand identity · Print · Editorial · Social</p>
+        <p>Brand identity · Logo Design · Banners · Graphic Design</p>
       </div>
     </footer>
   );
