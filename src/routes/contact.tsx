@@ -137,7 +137,7 @@ ${payload.message}`);
           </button>
         </form>
       </div>
-<KenteRule className="mt-6" />
+{/* <KenteRule className="mt-6" /> */}
     </section>
   );
 }

@@ -62,7 +62,7 @@ function AboutPage() {
           </Link>
         </div>
       </div>
-      <KenteRule className="mt-6" />
+      {/* <KenteRule className="mt-6" /> */}
     </section>
   );
 }

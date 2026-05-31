@@ -71,7 +71,7 @@ function GalleryPage() {
         </div>
       </section>
 
-      <KenteRule className="mt-6" />
+      {/* <KenteRule className="mt-6" /> */}
 
       <section className="container-x py-24">
         <div className="border-t border-border pt-16">

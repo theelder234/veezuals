@@ -96,7 +96,7 @@ function Index() {
           ))}
         </ul>
       </section>
-      <KenteRule className="mt-6" />
+      {/* <KenteRule className="mt-6" /> */}
 
       {/* SELECTED WORK PLACEHOLDER */}
       <section className="container-x py-24 bg-white">
@@ -136,7 +136,7 @@ function Index() {
           </Link>
         </div>
       </section>
-          <KenteRule className="mt-6" />
+          {/* <KenteRule className="mt-6" /> */}
     </>
   );
 }
