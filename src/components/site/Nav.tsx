@@ -20,7 +20,7 @@ export function Nav() {
         <div className="container-x flex items-center justify-between h-16">
           <Link to="/" className="flex items-center font-display text-sm tracking-tight">
             <img src={logo} alt="Veezuals logo" className="h-20 w-auto object-contain" />
-            <span className="emizen-regular text-2xl font-bold -ml-5">Veezuals</span>
+            <span className="clash-grotesk-regular text-2xl font-bold -ml-5">Veezuals</span>
           </Link>
           <nav className="hidden md:flex items-center gap-8 text-sm">
             {links.map((l) => (

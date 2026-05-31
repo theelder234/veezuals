@@ -47,21 +47,21 @@ function ContactPage() {
             <p className="eyebrow text-muted-foreground">Elsewhere</p>
             <ul className="mt-3 space-y-2 text-sm">
               <li>
-                <a href="#" className="hover:text-[#07090A] text-muted-foreground flex items-center gap-2">
+                <a href="https://www.instagram.com/shedesignerr?igsh=YW9icDB4aDQ4N25x" target="_blank" rel="noreferrer" className="hover:text-[#07090A] text-muted-foreground flex items-center gap-2">
                   <Instagram className="h-4 w-4" />
-                  Instagram 
+                  Instagram
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-[#07090A] text-muted-foreground flex items-center gap-2">
                   <ExternalLink className="h-4 w-4" />
-                  Behance 
+                  Behance
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-[#07090A] text-muted-foreground flex items-center gap-2">
+                <a href="https://www.linkedin.com/in/victoria-edochie-0135a0288?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noreferrer" className="hover:text-[#07090A] text-muted-foreground flex items-center gap-2">
                   <Linkedin className="h-4 w-4" />
-                  LinkedIn 
+                  LinkedIn
                 </a>
               </li>
             </ul>

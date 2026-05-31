@@ -3,13 +3,7 @@
 @import "tw-animate-css";
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Alfa+Slab+One&display=swap");
-
-@font-face {
-  font-family: "Emizen";
-  src: url("@/assets/emizen/Emizen.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
+@import url("./assets/ClashGrotesk_Complete/Fonts/WEB/css/clash-grotesk.css");
 
 @custom-variant dark (&:is(.dark *));
 
@@ -118,8 +112,8 @@
     font-style: normal;
   }
 
-  .emizen-regular {
-    font-family: "Emizen";
+  .clash-grotesk-regular {
+    font-family: 'ClashGrotesk-Regular';
     font-weight: 400;
     font-style: normal;
   }

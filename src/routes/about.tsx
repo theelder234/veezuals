@@ -58,7 +58,7 @@ function AboutPage() {
           </div>
 
           <Link to="/contact" className="inline-flex items-center gap-2 px-5 py-3 border border-foreground text-sm text-foreground hover:bg-foreground hover:text-background transition">
-            <span className="emizen-regular">Work with Veezuals</span> →
+            <span className="clash-grotesk-regular">Work with Veezuals</span> →
           </Link>
         </div>
       </div>
