@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { KenteRule } from "@/components/site/KenteRule";
 
 const imageModules = import.meta.glob("../assets/projects/**/*.{jpg,jpeg,png}", {
@@ -33,7 +35,7 @@ export const Route = createFileRoute("/gallery")({
     meta: [
       { title: "Gallery | Veezuals" },
       { name: "description", content: "Showcase of brand identity, social media design, flyer design, and creative work by Veezuals." },
-      { property: "og:title", content: "Gallery — Veezuals" },
+      { property: "og:title", content: "Gallery | Veezuals" },
       { property: "og:description", content: "View all design projects and creative work." },
     ],
   }),
@@ -41,6 +43,26 @@ export const Route = createFileRoute("/gallery")({
 });
 
 function GalleryPage() {
+  const [selectedProject, setSelectedProject] = useState<{ name: string; images: string[] } | null>(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const handleNext = () => {
+    if (selectedProject) {
+      setCurrentImageIndex((prev) => (prev + 1) % selectedProject.images.length);
+    }
+  };
+
+  const handlePrev = () => {
+    if (selectedProject) {
+      setCurrentImageIndex((prev) => (prev - 1 + selectedProject.images.length) % selectedProject.images.length);
+    }
+  };
+
+  const handleClose = () => {
+    setSelectedProject(null);
+    setCurrentImageIndex(0);
+  };
+
   return (
     <>
       <section className="container-x py-24">
@@ -48,28 +70,91 @@ function GalleryPage() {
         <h1 className="display-lg mt-6 max-w-4xl">All <em className="text-blue-900">designs </em> and
           <br />creative <em className="text-blue-900">work. </em></h1>
         <p className="mt-6 max-w-2xl text-muted-foreground">
-          A collection of brand identity, social media design, flyer design, and creative projects.
+          A collection of brand identity, social media design, flyer design, and creative projects. Click any project to preview all images.
         </p>
       </section>
 
       <KenteRule className="mt-6" />
 
       <section className="container-x py-24">
-        <div className="space-y-24">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {galleryProjects.map((project) => (
-            <div key={project.name}>
-              <h2 className="text-2xl font-display mb-8">{project.name}</h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {project.images.map((image, idx) => (
-                  <div key={idx} className="aspect-[4/5] bg-card border border-border overflow-hidden hover:shadow-lg transition-shadow">
-                    <img src={image} alt={`${project.name} - ${idx + 1}`} className="w-full h-full object-cover" />
+            <button
+              key={project.name}
+              onClick={() => {
+                setSelectedProject(project);
+                setCurrentImageIndex(0);
+              }}
+              className="group text-left"
+            >
+              <div className="aspect-[4/5] bg-card border border-border overflow-hidden hover:shadow-lg transition-shadow cursor-pointer relative">
+                <img 
+                  src={project.images[0]} 
+                  alt={project.name} 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-end p-4">
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity">
+                    <p className="text-white text-sm font-display">{project.name}</p>
+                    <p className="text-white/80 text-xs mt-1">{project.images.length} image{project.images.length > 1 ? 's' : ''}</p>
                   </div>
-                ))}
+                </div>
               </div>
-            </div>
+            </button>
           ))}
         </div>
       </section>
+
+      {/* Preview Modal */}
+      {selectedProject && (
+        <div className="fixed inset-0 z-50 bg-black/80 flex flex-col items-center justify-center p-4">
+          <div className="w-full max-w-4xl bg-background rounded-lg overflow-hidden flex flex-col max-h-screen">
+            {/* Header */}
+            <div className="flex items-center justify-between p-4 border-b border-border">
+              <h2 className="font-display text-xl">{selectedProject.name}</h2>
+              <button
+                onClick={handleClose}
+                className="p-2 hover:bg-card rounded transition"
+                aria-label="Close preview"
+              >
+                <X size={24} />
+              </button>
+            </div>
+
+            {/* Image Preview */}
+            <div className="flex-1 flex items-center justify-center bg-card overflow-hidden">
+              <img
+                src={selectedProject.images[currentImageIndex]}
+                alt={`${selectedProject.name} - ${currentImageIndex + 1}`}
+                className="max-w-full max-h-full object-contain"
+              />
+            </div>
+
+            {/* Navigation */}
+            <div className="flex items-center justify-between p-4 border-t border-border">
+              <button
+                onClick={handlePrev}
+                disabled={selectedProject.images.length <= 1}
+                className="p-2 hover:bg-card disabled:opacity-50 disabled:cursor-not-allowed rounded transition"
+                aria-label="Previous image"
+              >
+                <ChevronLeft size={24} />
+              </button>
+              <p className="text-sm text-muted-foreground">
+                {currentImageIndex + 1} / {selectedProject.images.length}
+              </p>
+              <button
+                onClick={handleNext}
+                disabled={selectedProject.images.length <= 1}
+                className="p-2 hover:bg-card disabled:opacity-50 disabled:cursor-not-allowed rounded transition"
+                aria-label="Next image"
+              >
+                <ChevronRight size={24} />
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* <KenteRule className="mt-6" /> */}
 

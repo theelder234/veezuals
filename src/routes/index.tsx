@@ -109,8 +109,10 @@ function Index() {
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {projectCards.map(({ src, label, title }, index) => (
-            <div key={index} className="aspect-[4/5] bg-card border border-border overflow-hidden">
-              <img src={src} alt={title} className="w-full h-full object-cover" />
+            <div key={index} className="flex flex-col bg-card border border-border overflow-hidden">
+              <div className="aspect-[4/5] overflow-hidden flex-shrink-0">
+                <img src={src} alt={title} className="w-full h-full object-cover" />
+              </div>
               <div className="p-6 bg-background/80 backdrop-blur-sm">
                 <p className="eyebrow text-muted-foreground">{label}</p>
                 <p className="font-display text-xl mt-2">{title}</p>

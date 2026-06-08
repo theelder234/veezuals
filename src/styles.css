@@ -333,4 +333,11 @@
       transform: scale(1.12);
     }
   }
+
+  /* Image utility - ensures images fill containers properly */
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
 }

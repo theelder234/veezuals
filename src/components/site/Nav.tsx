@@ -16,18 +16,18 @@ export function Nav() {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/10 border-b border-border">
+      <header className="fixed top-0 inset-x-0 z-50 bg-background border-b border-border">
         <div className="container-x flex items-center justify-between h-16">
           <Link to="/" className="flex items-center font-display text-sm tracking-tight">
-            <img src={logo} alt="Veezuals logo" className="h-20 w-auto object-contain" />
-            <span className="clash-grotesk-regular text-2xl font-bold -ml-5">Veezuals</span>
+            <img src={logo} alt="Veezuals logo" className="h-30 w-auto object-cover -ml-5" />
+            <span className="clash-grotesk-bold my-10 text-2xl font-bold -ml-5">Veezuals</span>
           </Link>
           <nav className="hidden md:flex items-center gap-8 text-sm">
             {links.map((l) => (
               <Link
                 key={l.to}
                 to={l.to}
-                className="text-[#64aee0] hover:text-foreground transition-colors"
+                className="text-[#64aee0] text-lg hover:text-foreground transition-colors"
                 activeProps={{ className: "text-foreground" }}
                 activeOptions={{ exact: l.to === "/" }}
               >

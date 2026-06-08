@@ -8,8 +8,8 @@ export function Footer() {
       <div className="container-x py-16 grid gap-12 md:grid-cols-3">
         <div>
           <Link to="/" className="flex items-center font-display text-sm tracking-tight ">
-                    <img src={logo} alt="Veezuals logo" className="h-20 w-auto object-contain" />
-                    <span className="clash-grotesk-regular text-2xl font-bold -ml-5">Veezuals</span>
+                    <img src={logo} alt="Veezuals logo" className="h-30 -ml-5 md:h-30 w-auto object-contain" />
+                    <span className="clash-grotesk-bold  text-2xl font-bold -ml-5">Veezuals</span>
                     {/* <span className="text-muted-foreground hidden sm:inline">— Brand Designer</span> */}
                   </Link>
            

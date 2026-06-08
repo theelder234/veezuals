@@ -26,7 +26,9 @@ function AboutPage() {
 
       <div className="mt-20 grid lg:grid-cols-12 gap-10">
         <div className="lg:col-span-5">
-          <img src={portrait} alt="Veezuals" loading="lazy" width={1024} height={1024} className="w-full aspect-[4/5] object-cover" />
+          <div className="aspect-[4/5] overflow-hidden bg-card border border-border">
+            <img src={portrait} alt="Veezuals" loading="lazy" width={1024} height={1024} className="w-full h-full object-cover" />
+          </div>
         </div>
         <div className="lg:col-span-6 lg:col-start-7 space-y-8 text-base text-muted-foreground leading-relaxed">
           <p className="text-foreground text-lg">

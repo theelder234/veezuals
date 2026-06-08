@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { Instagram, Linkedin, ExternalLink } from "lucide-react";
+import { Instagram, Linkedin, Asterisk } from "lucide-react";
 import { KenteRule } from "@/components/site/KenteRule";
 
 export const Route = createFileRoute("/contact")({
@@ -54,7 +54,7 @@ function ContactPage() {
               </li>
               <li>
                 <a href="#" className="hover:text-[#07090A] text-muted-foreground flex items-center gap-2">
-                  <ExternalLink className="h-4 w-4" />
+                  <Asterisk className="h-4 w-4" />
                   Behance
                 </a>
               </li>
