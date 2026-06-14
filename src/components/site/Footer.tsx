@@ -1,13 +1,24 @@
 import { Link } from "@tanstack/react-router";
+import logo from "@/assets/veezuals-logo.png";
+
 
 export function Footer() {
   return (
-    <footer className="border-t border-border mt-32">
+    <footer className="border-t border-border">
       <div className="container-x py-16 grid gap-12 md:grid-cols-3">
         <div>
-          <p className="eyebrow text-muted-foreground">Studio</p>
-          <p className="mt-4 font-display text-2xl">Victoria Edochie</p>
-          <p className="mt-2 text-sm text-muted-foreground max-w-xs">
+         <Link to="/" className="flex items-center font-display text-sm tracking-tight">
+            <img
+              src={logo}
+              alt="Veezuals logo"
+              className="h-25 w-auto object-contain"
+            />
+            <span className="clash-grotesk-bold text-2xl font-bold -ml-[25px]">
+              Veezuals
+            </span>
+          </Link>
+           
+          <p className="-mt-5 text-sm text-muted-foreground max-w-xs">
             Helping brands look better, feel stronger, and connect deeper through design.
           </p>
         </div>
@@ -15,6 +26,7 @@ export function Footer() {
           <p className="eyebrow text-muted-foreground">Navigate</p>
           <ul className="mt-4 space-y-2 text-sm">
             <li><Link to="/about" className="hover:text-foreground text-muted-foreground">About</Link></li>
+            <li><Link to="/gallery" className="hover:text-foreground text-muted-foreground">Gallery</Link></li>
             <li><Link to="/services" className="hover:text-foreground text-muted-foreground">Services</Link></li>
             <li><Link to="/policies" className="hover:text-foreground text-muted-foreground">Policies</Link></li>
             <li><Link to="/contact" className="hover:text-foreground text-muted-foreground">Contact</Link></li>
@@ -30,9 +42,9 @@ export function Footer() {
           </Link>
         </div>
       </div>
-      <div className="container-x py-6 border-t border-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs text-muted-foreground">
-        <p>© {new Date().getFullYear()} Victoria Edochie. All rights reserved.</p>
-        <p>Brand identity · Print · Editorial · Social</p>
+      <div className="container-x py-6 border-t border-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs clash-grotesk-regular">
+        <p>© {new Date().getFullYear()} Veezuals. All rights reserved.</p>
+        {/* <p>Brand identity · Logo Design · Banners · Graphic Design</p> */}
       </div>
     </footer>
   );

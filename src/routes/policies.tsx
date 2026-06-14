@@ -1,11 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { KenteRule } from "@/components/site/KenteRule";
 
 export const Route = createFileRoute("/policies")({
   head: () => ({
     meta: [
-      { title: "Creative Service Guidelines — Victoria Edochie" },
-      { name: "description", content: "Payment, revision, timeline, delivery, cancellation, and usage policies for working with Victoria Edochie." },
-      { property: "og:title", content: "Creative Service Guidelines — Victoria Edochie" },
+      { title: "Creative Service Guidelines — Veezuals" },
+      { name: "description", content: "Payment, revision, timeline, delivery, cancellation, and usage policies for working with Veezuals." },
+      { property: "og:title", content: "Creative Service Guidelines — Veezuals" },
       { property: "og:description", content: "How we work together: payment, revisions, timelines, delivery, and usage rights." },
     ],
   }),
@@ -83,28 +84,30 @@ const sections = [
 
 function PoliciesPage() {
   return (
-    <section className="container-x py-24">
+    <section className="container-x py-24 bg-[#DAF2FE]">
       <p className="eyebrow text-muted-foreground">Creative Service Guidelines</p>
-      <h1 className="display-xl mt-6 max-w-4xl">How we work together.</h1>
+      <h1 className="display-lg mt-6 max-w-4xl text-[#07090A]">How we work
+        <br /> <span className="border text-[#64AEE0] mb-5">together.</span></h1>
       <p className="mt-6 max-w-2xl text-muted-foreground">
         These guidelines protect both the client and the studio, keeping every project on a clear, respectful, and creative path from brief to delivery.
       </p>
 
-      <div className="mt-20 grid gap-px bg-border md:grid-cols-2">
+      <div className="mt-20 grid gap-px border  md:grid-cols-2 bg-[#C1E7F9] text-[#07090A]">
         {sections.map((s) => (
-          <article key={s.n} className="bg-background p-8 md:p-10">
-            <div className="flex items-baseline gap-4">
+          <article key={s.n} className="bg-[#EDF8FE] p-8 md:p-10">
+            <div className="flex items-baseline  gap-4">
               <span className="text-muted-foreground text-sm">{s.n}</span>
               <h2 className="font-display text-2xl">{s.t}</h2>
             </div>
             <ul className="mt-6 space-y-4 text-sm text-muted-foreground leading-relaxed">
               {s.body.map((b, i) => (
-                <li key={i} className="border-l border-border pl-4">{b}</li>
+                <li key={i} className="border-l  pl-4 border-[#07090A]">{b}</li>
               ))}
             </ul>
           </article>
         ))}
       </div>
+{/* <KenteRule className="mt-6" /> */}
     </section>
   );
 }
