@@ -17,23 +17,23 @@ export function Nav() {
   return (
     <>
       <header className="fixed top-0 inset-x-0 z-50 bg-background border-b border-border">
-        <div className="container-x flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center font-display text-sm tracking-tight">
+        <div className="container-x flex items-center justify-between h-16 gap-4">
+          <Link to="/" className="flex items-center gap-2 font-display text-sm tracking-tight min-w-0 shrink-0">
             <img
               src={logo}
               alt="Veezuals logo"
-              className="h-25 w-auto object-contain"
+              className="h-10 md:h-12 w-auto object-contain shrink-0"
             />
-            <span className="clash-grotesk-bold text-2xl font-bold -ml-[25px]">
+            <span className="clash-grotesk-bold text-lg md:text-xl font-bold leading-none">
               Veezuals
             </span>
           </Link>
-          <nav className="hidden md:flex items-center container-x gap-8 text-sm">
+          <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-sm">
             {links.map((l) => (
               <Link
                 key={l.to}
                 to={l.to}
-                className="text-[#64aee0] text-lg hover:text-foreground transition-colors"
+                className="text-[#64aee0] text-sm lg:text-base hover:text-foreground transition-colors"
                 activeProps={{ className: "text-foreground" }}
                 activeOptions={{ exact: l.to === "/" }}
               >
