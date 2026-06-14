@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import logoLg from "@/assets/logo-lg.png";
-import logoSm from "@/assets/logo-sm.png";
+import logo from "@/assets/veezuals-logo.png";
 
 
 export function Footer() {
@@ -9,18 +8,14 @@ export function Footer() {
       <div className="container-x py-16 grid gap-12 md:grid-cols-3">
         <div>
          <Link to="/" className="flex items-center font-display text-sm tracking-tight">
-            {/* Large screen logo */}
             <img
-              src={logoLg}
+              src={logo}
               alt="Veezuals logo"
-              className="hidden md:block h-10 w-auto object-contain"
+              className="h-25 w-auto object-contain"
             />
-            {/* Small screen logo */}
-            <img
-              src={logoSm}
-              alt="Veezuals logo"
-              className="md:hidden h-10 w-auto object-contain"
-            />
+            <span className="clash-grotesk-bold text-2xl font-bold -ml-[25px]">
+              Veezuals
+            </span>
           </Link>
            
           <p className="-mt-5 text-sm text-muted-foreground max-w-xs">

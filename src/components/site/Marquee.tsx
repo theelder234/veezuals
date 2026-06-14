@@ -1,7 +1,7 @@
-export function Marquee({ items, className }: { items: string[]; className?: string }) {
+export function Marquee({ items }: { items: string[] }) {
   const row = [...items, ...items];
   return (
-    <div className={`overflow-hidden border-y border-border py-6 bg-[#EDF8FE] ${className ?? ""}`}>
+    <div className="overflow-hidden border-y border-border py-6 bg-[#EDF8FE]">
       <div className="flex gap-12 whitespace-nowrap animate-[marquee_40s_linear_infinite]">
         {row.map((t, i) => (
           <span key={i} className="font-display text-2xl md:text-4xl text-[#07090A]">
