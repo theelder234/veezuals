@@ -51,15 +51,15 @@ function Index() {
           <div className="lg:col-span-8">
             <p className="eyebrow text-muted-foreground">Brand Designer · Est. 2020</p>
             <h1 className="display-lg mt-6">
-             <em className="not-italic text-[#64AEE0]">Crafting Designs</em> that makes brands <em className="not-italic text-[#64AEE0]">Look Better,</em> Feel Stronger, and <em className="not-italic text-[#64AEE0]"> Connect Deeper.</em>
+             <em className="not-italic text-[#64AEE0]">Crafting Designs</em> that make brands <em className="not-italic text-[#64AEE0]">Look Better,</em> Feel Stronger, and <em className="not-italic text-[#64AEE0]"> Connect Deeper.</em>
             </h1>
           </div>
-          <div className="lg:col-span-4 flex flex-col gap-6">
-            <p className="text-base text-muted-foreground max-w-sm">
-              I'm Victoria Edochie an independent brand designer working across brand identity, flyers, social media designs, and editorial. Quietly crafting, loud results.
+          <div className="lg:col-span-4 lg:pb-25 flex flex-col gap-6">
+            <p className="text-base leading-loose text-muted-foreground max-w-sm">
+              I'm Victoria Edochie an independent brand designer working across brand identity, flyers and social media designs. Quietly crafting, loud results.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link to="/contact" className="px-5 py-3 bg-foreground text-background text-sm hover:opacity-90 transition">
+              <Link to="/contact" className="px-5 py-3 bg-foreground text-background text-sm hover:opacity-50 transition">
                 Book a project
               </Link>
               <Link to="/services" className="px-5 py-3 border border-foreground text-sm hover:bg-foreground hover:text-background transition">

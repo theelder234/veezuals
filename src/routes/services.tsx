@@ -77,7 +77,7 @@ function ServicesPage() {
         <p className="font-display text-3xl md:text-4xl max-w-xl">
           Not sure which service fits? Tell me about the project, I'll guide you.
         </p>
-        <Link to="/contact" className="self-start px-6 py-4 bg-foreground text-background text-sm hover:opacity-90">
+        <Link to="/contact" className="self-start lg:mx-20 px-6 py-4 bg-foreground text-background text-sm hover:opacity-90">
           Start a project →
         </Link>
       </div>

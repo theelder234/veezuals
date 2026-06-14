@@ -340,4 +340,14 @@
     max-width: 100%;
     height: auto;
   }
+
+  /* Cursor pointer for interactive elements */
+  button,
+  a,
+  [role="button"],
+  [role="link"],
+  [role="menuitem"],
+  [role="tab"] {
+    cursor: pointer;
+  }
 }

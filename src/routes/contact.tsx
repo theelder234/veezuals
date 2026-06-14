@@ -131,7 +131,7 @@ ${payload.message}`);
           <button
             type="submit"
             disabled={loading}
-            className="mt-6 border border-[#07090A] inline-flex items-center gap-3 px-6 py-4 bg-foreground text-background text-sm hover:opacity-90"
+            className="mt-6 border border-[#07090A] inline-flex items-center gap-3 px-6 py-4 bg-[#07090A] text-white text-sm hover:opacity-90"
           >
             {loading ? "Opening WhatsApp…" : "Send via WhatsApp →"}
           </button>

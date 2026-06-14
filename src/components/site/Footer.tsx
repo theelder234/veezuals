@@ -7,13 +7,18 @@ export function Footer() {
     <footer className="border-t border-border">
       <div className="container-x py-16 grid gap-12 md:grid-cols-3">
         <div>
-          <Link to="/" className="flex items-center font-display text-sm tracking-tight ">
-                    <img src={logo} alt="Veezuals logo" className="h-30 -ml-5 md:h-30 w-auto object-contain" />
-                    <span className="clash-grotesk-bold  text-2xl font-bold -ml-5">Veezuals</span>
-                    {/* <span className="text-muted-foreground hidden sm:inline">— Brand Designer</span> */}
-                  </Link>
+         <Link to="/" className="flex items-center font-display text-sm tracking-tight">
+            <img
+              src={logo}
+              alt="Veezuals logo"
+              className="h-25 w-auto object-contain"
+            />
+            <span className="clash-grotesk-bold text-2xl font-bold -ml-[25px]">
+              Veezuals
+            </span>
+          </Link>
            
-          <p className="mt-2 text-sm text-muted-foreground max-w-xs">
+          <p className="-mt-5 text-sm text-muted-foreground max-w-xs">
             Helping brands look better, feel stronger, and connect deeper through design.
           </p>
         </div>
@@ -39,7 +44,7 @@ export function Footer() {
       </div>
       <div className="container-x py-6 border-t border-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs clash-grotesk-regular">
         <p>© {new Date().getFullYear()} Veezuals. All rights reserved.</p>
-        <p>Brand identity · Logo Design · Banners · Graphic Design</p>
+        {/* <p>Brand identity · Logo Design · Banners · Graphic Design</p> */}
       </div>
     </footer>
   );
