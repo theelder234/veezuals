@@ -20,14 +20,18 @@ export function Nav() {
       <header className="fixed top-0 inset-x-0 z-50 bg-background border-b border-border">
         <div className="container-x flex items-center justify-between h-16">
           <Link to="/" className="flex items-center font-display text-sm tracking-tight">
+            {/* Large screen logo */}
             <img
-              src={logo}
+              src={logoLg}
               alt="Veezuals logo"
-              className="h-25 w-auto object-contain"
+              className="hidden md:block h-10 w-auto object-contain"
             />
-            <span className="clash-grotesk-bold text-2xl font-bold -ml-[25px]">
-              Veezuals
-            </span>
+            {/* Small screen logo */}
+            <img
+              src={logoSm}
+              alt="Veezuals logo"
+              className="md:hidden h-10 w-auto object-contain"
+            />
           </Link>
           <nav className="hidden md:flex items-center container-x gap-8 text-sm">
             {links.map((l) => (
