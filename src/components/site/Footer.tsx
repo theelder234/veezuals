@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import logo from "@/assets/veezuals-logo.png";
+import logoLg from "@/assets/logo-lg.png";
+import logoSm from "@/assets/logo-sm.png";
 
 
 export function Footer() {
