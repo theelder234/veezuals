@@ -1,4 +1,4 @@
-export function Marquee({ items }: { items: string[] }) {
+export function Marquee({ items, className }: { items: string[]; className?: string }) {
   const row = [...items, ...items];
   return (
     <div className="overflow-hidden border-y border-border py-6 bg-[#EDF8FE]">
